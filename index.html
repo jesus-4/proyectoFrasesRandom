@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Random</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Frases Random</h1>
+            <p class="hero-subtitle">Un lugar para guardar las palabras que importan</p>
+        </div>
+        <div class="hero-decoration"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Phrases Section -->
+        <section class="phrases-section">
+            <h2 class="section-title">Recopilatorio</h2>
+            
+            <div class="phrases-container" id="phrasesContainer">
+                <!-- Phrases will be added here -->
+            </div>
+
+            <!-- Add New Phrase Form -->
+            <div class="add-phrase-form">
+                <h3>Agregar nueva frase</h3>
+                <div class="form-group">
+                    <textarea id="newPhrase" placeholder="Escribe tu frase aquí..." rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="phraseAuthor" placeholder="Autor (opcional)">
+                </div>
+                <button id="addPhraseBtn" class="btn-primary">Agregar Frase</button>
+            </div>
+        </section>
+
+        <!-- Secret Section -->
+        <section class="secret-section">
+            <div class="secret-header">
+                <h2 class="section-title">🔒 Un Lugar Secreto</h2>
+                <p class="secret-hint">Solo para conocedores...</p>
+            </div>
+
+            <!-- Password Gate -->
+            <div class="password-gate" id="passwordGate">
+                <div class="password-card">
+                    <div class="lock-icon">🔐</div>
+                    <h3>Ingresa la clave secreta</h3>
+                    <div class="form-group">
+                        <input type="password" id="secretPassword" placeholder="Clave secreta">
+                    </div>
+                    <button id="unlockBtn" class="btn-primary">Desbloquear</button>
+                    <p class="error-message" id="errorMessage">Clave incorrecta. Intenta de nuevo.</p>
+                </div>
+            </div>
+
+            <!-- Secret Content (Hidden by default) -->
+            <div class="secret-content hidden" id="secretContent">
+                <div class="secret-card">
+                    <h3>✨ ¡Bienvenido al club secreto! ✨</h3>
+                    <p>Este es un lugar especial con frases que no todos pueden ver.</p>
+                    
+                    <div class="secret-phrases" id="secretPhrases">
+                        <!-- Secret phrases will appear here -->
+                    </div>
+
+                    <button id="lockBtn" class="btn-secondary">Cerrar y volver a bloquear</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hecho con ❤️ y algo de magia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
